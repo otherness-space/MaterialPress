@@ -110,7 +110,7 @@ class materialpress_customize {
 	  //2. Register new settings to the WP database...
 	  $wp_customize->add_setting( 'link_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
 	     array(
-	        'default' => '#2BA6CB', //Default setting/value to save
+	        'default' => '#000000', //Default setting/value to save
 	        'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
 	        'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
 	        'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?

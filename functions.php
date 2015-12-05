@@ -23,6 +23,20 @@ function materialpress_scripts() {
 	wp_enqueue_script( 'tooltip', get_template_directory_uri() . '/js/tooltip.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '1.0.0', true );
 
+//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/file-name.js', array(), '1.0.0', true );
+
+//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/animation.js', array(), '1.0.0', true );
+//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/buttons.js', array(), '1.0.0', true );
+//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/cards.js', array(), '1.0.0', true );
+//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/hammer.min.js', array(), '1.0.0', true );
+//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/jquery.hammer.js', array(), '1.0.0', true );
+//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/jquery.time-ago.min.js', array(), '1.0.0', true );
+//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/pushpin.js', array(), '1.0.0', true );
+//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/scrollfire.js', array(), '1.0.0', true );
+//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/slider.js', array(), '1.0.0', true );
+//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/transitions.js', array(), '1.0.0', true );
+//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/waves.js', array(), '1.0.0', true );
+
 	wp_enqueue_script( 'init', get_template_directory_uri() . '/js/init.js', array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'materialpress_scripts' );
@@ -106,6 +120,8 @@ class materialpress_customize {
 	  );
 
 /** ------------------------------------------------------------------------ */
+/** Additional Customizer Settings-Controls */
+
 /** ------------------------------------------------------------------------ */
 	  //2. Register new settings to the WP database...
 	  $wp_customize->add_setting( 'link_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record

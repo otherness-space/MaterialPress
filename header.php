@@ -1,4 +1,13 @@
-<!doctype html>
+<?php
+/**
+ * The header for our theme.
+ *
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
+ *
+ * @package MaterialPress
+ */
+
+?><!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -33,13 +42,13 @@
 
 	<!-- Android 5 Chrome Color -->
 	<meta name="theme-color" content="#EE6E73">
-	
+
 	<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-	
+
 	<?php wp_head();?>
 </head>
 
-	
+
 <body <?php body_class(); ?>>
 	<nav id="front-page-nav">
 		<div class="container">

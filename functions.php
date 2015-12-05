@@ -120,9 +120,7 @@ class materialpress_customize {
 	  );
 
 /** ------------------------------------------------------------------------ */
-/** Additional Customizer Settings-Controls */
 
-/** ------------------------------------------------------------------------ */
 	  //2. Register new settings to the WP database...
 	  $wp_customize->add_setting( 'link_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
 	     array(
@@ -132,6 +130,14 @@ class materialpress_customize {
 	        'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
 	     )
 	  );
+
+/** Additional Customizer Settings */
+		$wp_customize->add_setting( 'nav_background_color', array(
+			'default'           => '#EE6E73',
+			'sanitize_callback' => 'sanitize_hex_color',
+		) );
+
+/** ------------------------------------------------------------------------ */
 
 	  //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
 	  $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
@@ -144,7 +150,31 @@ class materialpress_customize {
 	        'priority' => 10, //Determines the order this control appears in for the specified section
 	     )
 	  ) );
+	  $wp_customize->add_control( new WP_Customize_Color_Control(
+	  	$wp_customize,
+	  		'materialpress_nav_background_color', array(
+	  		'label'    => __( 'Nav Link Color', 'materialpress' ),
+			'section'  => 'colors',
+			'settings' => 'nav_background_color',
+			'priority' => 1,
+//		$wp_customize->add_control( new WP_Customize_Color_Control(
+//			$wp_customize,
+//			materialpress_nav_background_color', array(
+//			'label'    => __( '', 'materialpress' ),
+//			'section'  => 'colors',
+//			'settings' => 'nav_background_color',
+//			'priority' => 1x,
 
+//		'' => __( '', '' ),
+
+//		)
+//	) );
+		)
+	  ) );
+
+/** Additional Customizer Controls */
+
+/** ------------------------------------------------------------------------ */
 	  //4. We can also change built-in settings by modifying properties. For instance, let's make some stuff use live preview JS...
 	  $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 	  $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -152,14 +182,46 @@ class materialpress_customize {
 	  $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
    }
 
+   /**
+   * This will output the custom WordPress settings to the live theme's WP head.
+   *
+   * Used by hook: 'wp_head'
+   *
+   * @see add_action('wp_head',$func)
+   */
+
    public static function header_output() {
 	  ?>
 	  <!--Customizer CSS-->
 	  <style type="text/css">
-	       <?php self::generate_css('#site-title a', 'color', 'header_textcolor', '#'); ?>
-	       <?php self::generate_css('body', 'background-color', 'background_color', '#'); ?>
+
+	    <?php self::generate_css(
+			'#site-title a',
+			'color',
+			'header_textcolor',
+			'#'
+		);
+
+	     self::generate_css(
+		 	'body',
+			'background-color',
+			'#'
+	  	);
+
+			self::generate_css(
+			'a',
+			'color',
+			'link_textcolor'
+		);
+/** Additional Customizer CSS */
+			self::generate_css(
+   				'nav',
+				'background-color',
+   				'#'
+);
+
 /** ------------------------------------------------------------------------ */
-	       <?php self::generate_css('a', 'color', 'link_textcolor'); ?>
+		?>
 	  </style>
 	  <!--/Customizer CSS-->
 	  <?php
@@ -200,5 +262,11 @@ add_action( 'wp_head' , array( 'materialpress_customize' , 'header_output' ) );
 
 // Enqueue live preview javascript in Theme Customizer admin screen
 add_action( 'customize_preview_init' , array( 'materialpress_customize' , 'live_preview' ) );
+
+// Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+function materialpress_customize_preview_js() {
+	wp_enqueue_script( 'materialpress-customizer', get_template_directory_uri() . '/scripts/customizer.js', array( 'customize-preview', 'jquery' ), '3.0.0', true );
+}
+add_action( 'customize_preview_init', 'materialpress_customize_preview_js' );
 
 ?>

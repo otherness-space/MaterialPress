@@ -1,7 +1,5 @@
 <?php
-
 if ( ! isset( $content_width ) ) $content_width = 900;
-
 /**
  * Enqueue scripts and styles.
 */
@@ -22,49 +20,28 @@ function materialpress_scripts() {
 	wp_enqueue_script( 'toasts', get_template_directory_uri() . '/js/toasts.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'tooltip', get_template_directory_uri() . '/js/tooltip.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'velocity', get_template_directory_uri() . '/js/velocity.min.js', array(), '1.0.0', true );
-
-//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/file-name.js', array(), '1.0.0', true );
-
-//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/animation.js', array(), '1.0.0', true );
-//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/buttons.js', array(), '1.0.0', true );
-//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/cards.js', array(), '1.0.0', true );
-//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/hammer.min.js', array(), '1.0.0', true );
-//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/jquery.hammer.js', array(), '1.0.0', true );
-//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/jquery.time-ago.min.js', array(), '1.0.0', true );
-//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/pushpin.js', array(), '1.0.0', true );
-//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/scrollfire.js', array(), '1.0.0', true );
-//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/slider.js', array(), '1.0.0', true );
-//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/transitions.js', array(), '1.0.0', true );
-//	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/waves.js', array(), '1.0.0', true );
-
 	wp_enqueue_script( 'init', get_template_directory_uri() . '/js/init.js', array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'materialpress_scripts' );
-
 /**
  * Navigation Menus
 */
-
 function materialpress_nav_menu() {
 	register_nav_menu( 'primary', 'Primary Menu' );
 	register_nav_menu( 'footer', 'Footer Menu' );
 }
 add_action( 'after_setup_theme', 'materialpress_nav_menu' );
-
 /* Add Waves Effect to Menu Items */
 add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 function special_nav_class($classes, $item){
 	$classes[] = "waves-effect waves-light";
 	return $classes;
 }
-
-
 /**
  * Register sidebars and widgetized areas.
  *
  */
 function materialpress_widgets() {
-
 	register_sidebar( array(
 		'name'          => 'Footer 1',
 		'id'            => 'footer-widgetize-1',
@@ -73,7 +50,6 @@ function materialpress_widgets() {
 		'before_title'  => '<h5 class="white-text truncate">',
 		'after_title'   => '</h5>',
 	) );
-
 	register_sidebar( array(
 		'name'          => 'Footer 2',
 		'id'            => 'footer-widgetize-2',
@@ -82,7 +58,6 @@ function materialpress_widgets() {
 		'before_title'  => '<h5 class="white-text truncate">',
 		'after_title'   => '</h5>',
 	) );
-
 	register_sidebar( array(
 		'name'          => 'Footer 3',
 		'id'            => 'footer-widgetize-3',
@@ -91,10 +66,8 @@ function materialpress_widgets() {
 		'before_title'  => '<h5 class="white-text truncate">',
 		'after_title'   => '</h5>',
 	) );
-
 }
 add_action( 'widgets_init', 'materialpress_widgets' );
-
 /**
  * Theme Support
 */
@@ -104,8 +77,6 @@ function materialpress_support() {
 	add_theme_support( 'post-formats', array('aside', 'gallery', 'link','image','quote','video','status','audio') );
 }
 add_action( 'after_setup_theme', 'materialpress_support' );
-
-/** ------------------------------------------------------------------------ */
 /* Customizer API */
 class materialpress_customize {
    public static function register ( $wp_customize ) {
@@ -119,8 +90,6 @@ class materialpress_customize {
 	     )
 	  );
 
-/** ------------------------------------------------------------------------ */
-
 	  //2. Register new settings to the WP database...
 	  $wp_customize->add_setting( 'link_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
 	     array(
@@ -130,14 +99,6 @@ class materialpress_customize {
 	        'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
 	     )
 	  );
-
-/** Additional Customizer Settings */
-		$wp_customize->add_setting( 'nav_background_color', array(
-			'default'           => '#EE6E73',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-
-/** ------------------------------------------------------------------------ */
 
 	  //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
 	  $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
@@ -150,78 +111,47 @@ class materialpress_customize {
 	        'priority' => 10, //Determines the order this control appears in for the specified section
 	     )
 	  ) );
-	  $wp_customize->add_control( new WP_Customize_Color_Control(
-	  	$wp_customize,
-	  		'materialpress_nav_background_color', array(
-	  		'label'    => __( 'Nav Link Color', 'materialpress' ),
-			'section'  => 'colors',
-			'settings' => 'nav_background_color',
-			'priority' => 1,
-//		$wp_customize->add_control( new WP_Customize_Color_Control(
-//			$wp_customize,
-//			materialpress_nav_background_color', array(
-//			'label'    => __( '', 'materialpress' ),
-//			'section'  => 'colors',
-//			'settings' => 'nav_background_color',
-//			'priority' => 1x,
+		/**--------------------------------------------------------------------------*/
 
-//		'' => __( '', '' ),
+			  //2. Register new settings to the WP database...
+			  $wp_customize->add_setting( 'nav_background_color', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+			     array(
+			        'default' => '#ee6e73', //Default setting/value to save
+			        'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+			        'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+			        'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+			        'sanitize_callback' => 'sanitize_hex_color',
+			     )
+			  );
 
-//		)
-//	) );
-		)
-	  ) );
+			  //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+			  $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+			     $wp_customize, //Pass the $wp_customize object (required)
+			     'materialpress_nav_background_color', //Set a unique ID for the control
+			     array(
+			        'label' => __( 'Nav Background Color', 'materialpress' ), //Admin-visible name of the control
+			        'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+			        'settings' => 'nav_background_color', //Which setting to load and manipulate (serialized is okay)
+			        'priority' => 100, //Determines the order this control appears in for the specified section
+			     )
+			  ) );
 
-/** Additional Customizer Controls */
+		/**--------------------------------------------------------------------------*/
 
-/** ------------------------------------------------------------------------ */
 	  //4. We can also change built-in settings by modifying properties. For instance, let's make some stuff use live preview JS...
 	  $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 	  $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 	  $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 	  $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
    }
-
-   /**
-   * This will output the custom WordPress settings to the live theme's WP head.
-   *
-   * Used by hook: 'wp_head'
-   *
-   * @see add_action('wp_head',$func)
-   */
-
    public static function header_output() {
 	  ?>
 	  <!--Customizer CSS-->
 	  <style type="text/css">
-
-	    <?php self::generate_css(
-			'#site-title a',
-			'color',
-			'header_textcolor',
-			'#'
-		);
-
-	     self::generate_css(
-		 	'body',
-			'background-color',
-			'#'
-	  	);
-
-			self::generate_css(
-			'a',
-			'color',
-			'link_textcolor'
-		);
-/** Additional Customizer CSS */
-			self::generate_css(
-   				'nav',
-				'background-color',
-   				'#'
-);
-
-/** ------------------------------------------------------------------------ */
-		?>
+	       <?php self::generate_css('#site-title a', 'color', 'header_textcolor', '#'); ?>
+	       <?php self::generate_css('body', 'background-color', 'background_color', '#'); ?>
+				 <?php self::generate_css('nav', 'background-color', 'nav_background_color'); ?>
+	       <?php self::generate_css('a', 'color', 'link_textcolor'); ?>
 	  </style>
 	  <!--/Customizer CSS-->
 	  <?php
@@ -236,7 +166,6 @@ class materialpress_customize {
 	       true // Specify whether to put in footer (leave this true)
 	  );
    }
-
 	public static function generate_css( $selector, $style, $mod_name, $prefix='', $postfix='', $echo=true ) {
 	  $return = '';
 	  $mod = get_theme_mod($mod_name);
@@ -256,17 +185,8 @@ class materialpress_customize {
 
 // Setup the Theme Customizer settings and controls...
 add_action( 'customize_register' , array( 'materialpress_customize' , 'register' ) );
-
 // Output custom CSS to live site
 add_action( 'wp_head' , array( 'materialpress_customize' , 'header_output' ) );
-
 // Enqueue live preview javascript in Theme Customizer admin screen
 add_action( 'customize_preview_init' , array( 'materialpress_customize' , 'live_preview' ) );
-
-// Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
-function materialpress_customize_preview_js() {
-	wp_enqueue_script( 'materialpress-customizer', get_template_directory_uri() . '/scripts/customizer.js', array( 'customize-preview', 'jquery' ), '3.0.0', true );
-}
-add_action( 'customize_preview_init', 'materialpress_customize_preview_js' );
-
 ?>

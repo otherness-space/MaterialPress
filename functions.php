@@ -25,6 +25,8 @@ function materialpress_scripts() {
 
 //	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/file-name.js', array(), '1.0.0', true );
 
+//	wp_enqueue_script( 'customizer', get_template_directory_uri() . '/scripts/customizer.js', array(), '1.0.0', true );
+
 //	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/animation.js', array(), '1.0.0', true );
 //	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/buttons.js', array(), '1.0.0', true );
 //	wp_enqueue_script( 'name', get_template_directory_uri() . '/js/cards.js', array(), '1.0.0', true );
@@ -264,9 +266,8 @@ add_action( 'wp_head' , array( 'materialpress_customize' , 'header_output' ) );
 add_action( 'customize_preview_init' , array( 'materialpress_customize' , 'live_preview' ) );
 
 // Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
-function materialpress_customize_preview_js() {
-	wp_enqueue_script( 'materialpress-customizer', get_template_directory_uri() . '/scripts/customizer.js', array( 'customize-preview', 'jquery' ), '3.0.0', true );
-}
-add_action( 'customize_preview_init', 'materialpress_customize_preview_js' );
+//function materialpress_customize_preview_js() {
+//	wp_enqueue_script( 'materialpress-customizer', get_template_directory_uri() . '/scripts/customizer.js', array( 'customize-preview', 'jquery' ), '3.0.0', true ); }
+//add_action( 'customize_preview_init', 'materialpress_customize_preview_js' );
 
 ?>

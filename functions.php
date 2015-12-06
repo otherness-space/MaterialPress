@@ -217,11 +217,6 @@ public static function generate_css( $selector, $style, $mod_name, $prefix='', $
 	}
 }
 
-// Setup the Theme Customizer settings and controls...
-add_action( 'customize_register' , array( 'materialpress_customize' , 'register' ) );
-// Output custom CSS to live site
-add_action( 'wp_head' , array( 'materialpress_customize' , 'header_output' ) );
-// Enqueue live preview javascript in Theme Customizer admin screen
 public static function live_preview() {
 	wp_enqueue_script(
 		'materialpress-themecustomizer', // Give the script a unique ID
@@ -231,5 +226,11 @@ public static function live_preview() {
 				true // Specify whether to put in footer (leave this true)
 			);
 }
+
+// Setup the Theme Customizer settings and controls...
+add_action( 'customize_register' , array( 'materialpress_customize' , 'register' ) );
+// Output custom CSS to live site
+add_action( 'wp_head' , array( 'materialpress_customize' , 'header_output' ) );
+// Enqueue live preview javascript in Theme Customizer admin screen
 add_action( 'customize_preview_init' , array( 'materialpress_customize' , 'live_preview' ) );
 ?>

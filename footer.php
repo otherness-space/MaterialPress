@@ -1,4 +1,5 @@
-	<footer class="page-footer red lighten-2">
+	<footer class="page-footer">
+		<!-- page-footer red lighten-2 -->
 		<div class="container">
 			<div class="row">
 				<div class="col l4 s12">
@@ -18,7 +19,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer-copyright red lighten-1">
+		<div class="footer-copyright">
+			<!-- footer-copyright red lighten-1 -->
 			<div class="container">
 				<span class="white-text">© <?php echo date('Y'); ?> Copyright <?php echo get_bloginfo( name ); ?></span>
 			<a class="white-text right truncate" href="#">Back to Top</a>
@@ -27,6 +29,6 @@
 	</footer>
 
 	<?php wp_footer();?>
-	
+
 </body>
 </html>

@@ -2168,8 +2168,8 @@ footer.page-footer {
     overflow: hidden;
     height: 50px;
     line-height: 50px;
-    color: rgba(255, 255, 255, 0.8);
-    background-color: rgba(51, 51, 51, 0.08); }
+    color: #FFFFFF;
+    background-color: #ea454b; }
 
 table, th, td {
   border: none; }

@@ -169,6 +169,157 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 ) );
 
 /**--------------------------------------------------------------------------*/
+
+//2. Register new settings to the WP database...
+$wp_customize->add_setting( 'footer_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+	array(
+		'default' => '#FFFFFF', //Default setting/value to save
+		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+		'sanitize_callback' => 'sanitize_hex_color',
+	)
+);
+
+//3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+$wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+	$wp_customize, //Pass the $wp_customize object (required)
+		'materialpress_footer_textcolor', //Set a unique ID for the control
+			array(
+				'label' => __( 'Footer Text Color', 'materialpress' ), //Admin-visible name of the control
+				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+				'settings' => 'footer_textcolor', //Which setting to load and manipulate (serialized is okay)
+				'priority' => 103, //Determines the order this control appears in for the specified section
+			)
+) );
+
+/**--------------------------------------------------------------------------*/
+
+//2. Register new settings to the WP database...
+$wp_customize->add_setting( 'footer_background_color', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+	array(
+		'default' => '#ee6e73', //Default setting/value to save
+		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+		'sanitize_callback' => 'sanitize_hex_color',
+	)
+);
+
+//3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+$wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+	$wp_customize, //Pass the $wp_customize object (required)
+		'materialpress_footer_background_color', //Set a unique ID for the control
+			array(
+				'label' => __( 'Footer Background Color', 'materialpress' ), //Admin-visible name of the control
+				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+				'settings' => 'footer_background_color', //Which setting to load and manipulate (serialized is okay)
+				'priority' => 103, //Determines the order this control appears in for the specified section
+			)
+) );
+
+/**--------------------------------------------------------------------------*/
+
+//2. Register new settings to the WP database...
+$wp_customize->add_setting( 'page_footer_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+	array(
+		'default' => '#FFFFFF', //Default setting/value to save
+		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+		'sanitize_callback' => 'sanitize_hex_color',
+	)
+);
+
+//3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+$wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+	$wp_customize, //Pass the $wp_customize object (required)
+		'materialpress_page_footer_textcolor', //Set a unique ID for the control
+			array(
+				'label' => __( 'Page Footer Text Color', 'materialpress' ), //Admin-visible name of the control
+				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+				'settings' => 'page_footer_textcolor', //Which setting to load and manipulate (serialized is okay)
+				'priority' => 104, //Determines the order this control appears in for the specified section
+			)
+) );
+
+/**--------------------------------------------------------------------------*/
+
+//2. Register new settings to the WP database...
+$wp_customize->add_setting( 'page_footer_background_color', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+	array(
+		'default' => '#ee6e73', //Default setting/value to save
+		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+		'sanitize_callback' => 'sanitize_hex_color',
+	)
+);
+
+//3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+$wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+	$wp_customize, //Pass the $wp_customize object (required)
+		'materialpress_page_footer_background_color', //Set a unique ID for the control
+			array(
+				'label' => __( 'Page Footer Background Color', 'materialpress' ), //Admin-visible name of the control
+				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+				'settings' => 'page_footer_background_color', //Which setting to load and manipulate (serialized is okay)
+				'priority' => 105, //Determines the order this control appears in for the specified section
+			)
+) );
+
+/**--------------------------------------------------------------------------*/
+
+//2. Register new settings to the WP database...
+$wp_customize->add_setting( 'footer_copyright_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+	array(
+		'default' => '#FFFFFF', //Default setting/value to save
+		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+		'sanitize_callback' => 'sanitize_hex_color',
+	)
+);
+
+//3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+$wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+	$wp_customize, //Pass the $wp_customize object (required)
+		'materialpress_footer_copyright_textolor', //Set a unique ID for the control
+			array(
+				'label' => __( 'Footer Copyright Text Color', 'materialpress' ), //Admin-visible name of the control
+				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+				'settings' => 'footer_copyright_textcolor', //Which setting to load and manipulate (serialized is okay)
+				'priority' => 106, //Determines the order this control appears in for the specified section
+			)
+) );
+
+/**--------------------------------------------------------------------------*/
+
+//2. Register new settings to the WP database...
+$wp_customize->add_setting( 'footer_copyright_background_color', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+	array(
+		'default' => '#ee6e73', //Default setting/value to save
+		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+		'sanitize_callback' => 'sanitize_hex_color',
+	)
+);
+
+//3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+$wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+	$wp_customize, //Pass the $wp_customize object (required)
+		'materialpress_footer_copyright_background_color', //Set a unique ID for the control
+			array(
+				'label' => __( 'Footer Copyright Background Color', 'materialpress' ), //Admin-visible name of the control
+				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+				'settings' => 'footer_copyright_background_color', //Which setting to load and manipulate (serialized is okay)
+				'priority' => 107, //Determines the order this control appears in for the specified section
+			)
+) );
+
+/**--------------------------------------------------------------------------*/
+
 	  //4. We can also change built-in settings by modifying properties. For instance, let's make some stuff use live preview JS...
 	  $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 	  $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -194,9 +345,33 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 		'background-color',
 		'nav_background_color'
 	);
-self::generate_css('a',
-	'color',
-	'link_textcolor'
+	self::generate_css('a',
+		'color',
+		'link_textcolor'
+	);
+	self::generate_css('footer.page-footer',
+		'color',
+		'footer_textcolor'
+	);
+	self::generate_css('footer.page-footer',
+		'background-color',
+		'footer_background_color'
+	);
+	self::generate_css('page-footer',
+		'color',
+		'page_footer_textcolor'
+	);
+	self::generate_css('page-footer',
+		'background-color',
+		'page_footer_background_color'
+	);
+	self::generate_css('footer-copyright',
+		'color',
+		'footer_copyright_textcolor'
+	);
+	self::generate_css('footer-copyright',
+		'background-color',
+		'footer_copyright_background_color'
 	);
 ?>
 </style>
@@ -207,7 +382,7 @@ self::generate_css('a',
    public static function live_preview() {
 	  wp_enqueue_script(
 	       'materialpress-themecustomizer', // Give the script a unique ID
-	       get_template_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file
+	       get_template_directory_uri() . 'js/theme-customizer.js', // Define the path to the JS file
 	       array(  'jquery', 'customize-preview' ), // Define dependencies
 	       '', // Define a version (optional)
 	       true // Specify whether to put in footer (leave this true)

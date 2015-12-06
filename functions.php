@@ -233,5 +233,5 @@ add_action( 'customize_register' , array( 'materialpress_customize' , 'register'
 // Output custom CSS to live site
 add_action( 'wp_head' , array( 'materialpress_customize' , 'header_output' ) );
 // Enqueue live preview javascript in Theme Customizer admin screen
-add_action( 'customize_preview_init' , array( 'materialpress_customize' , 'live_preview' ) );
+add_action( 'customize_preview_init' , array( 'materialpress_customize' , 'materialpress_customizer_live_preview' ) );
 ?>

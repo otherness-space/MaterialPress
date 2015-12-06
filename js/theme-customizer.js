@@ -14,10 +14,17 @@ wp.customize( 'background_color', function( value ) {
  } );
 
  //Update site link color in real time...
-wp.customize( 'link_textcolor', function( value ) {
+wp.customize( 'nav_background_color', function( value ) {
   value.bind( function( newval ) {
-    $('a').css('color', newval );
+      $('nav').css('color', newval );
     } );
   } );
+
+  //Update site link color in real time...
+ wp.customize( 'link_textcolor', function( value ) {
+   value.bind( function( newval ) {
+     $('a').css('color', newval );
+     } );
+   } );
 
 } )( jQuery );

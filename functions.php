@@ -136,7 +136,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 				'materialpress' ), //Admin-visible name of the control
 				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
 				'settings' => 'link_textcolor', //Which setting to load and manipulate (serialized is okay)
-				'priority' => 10, //Determines the order this control appears in for the specified section
+				'priority' => 101, //Determines the order this control appears in for the specified section
 			)
 		) );
 /**--------------------------------------------------------------------------*/
@@ -200,15 +200,6 @@ self::generate_css('a',
 <?php
 }
 
-public static function live_preview() {
-	wp_enqueue_script(
-		'materialpress-themecustomizer', // Give the script a unique ID
-			get_template_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file
-				array('jquery', 'customize-preview' ), // Define dependencies
-				'', // Define a version (optional)
-				true // Specify whether to put in footer (leave this true)
-			);
-}
 public static function generate_css( $selector, $style, $mod_name, $prefix='', $postfix='', $echo=true ) {
 	$return = '';
 	$mod = get_theme_mod($mod_name);
@@ -231,5 +222,14 @@ add_action( 'customize_register' , array( 'materialpress_customize' , 'register'
 // Output custom CSS to live site
 add_action( 'wp_head' , array( 'materialpress_customize' , 'header_output' ) );
 // Enqueue live preview javascript in Theme Customizer admin screen
+public static function live_preview() {
+	wp_enqueue_script(
+		'materialpress-themecustomizer', // Give the script a unique ID
+			get_template_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file
+				array( 'jquery', 'customize-preview' ), // Define dependencies
+				'', // Define a version (optional)
+				true // Specify whether to put in footer (leave this true)
+			);
+}
 add_action( 'customize_preview_init' , array( 'materialpress_customize' , 'live_preview' ) );
 ?>

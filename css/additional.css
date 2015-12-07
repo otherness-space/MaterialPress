@@ -3,13 +3,13 @@
   color: inherit; }
 
 /**--------------------------------------------------------------------------*/
-code, pre {
+my-code, my-pre {
 	display: flex;
 	box-sizing: border-box;
 	padding: 5px 5px 15px;
 }
 
-code {
+my-code {
 	display: flex;
 	box-sizing: border-box;
 	border-radius: 10px 10px 20px 20px;
@@ -29,7 +29,7 @@ code:hover {
 	border-radius: 10px 10px 5px 5px;
 }
 */
-pre {
+my-pre {
 	margin: 1%;
 	border: solid 1px #000000;
 	border-radius: 7px;

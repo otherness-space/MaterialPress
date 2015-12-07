@@ -129,6 +129,7 @@ class materialpress_customize {
 	        'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
 	        'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
 	        'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+					'sanitize_callback' => 'sanitize_hex_color',
 	     )
 	  );
 
@@ -171,9 +172,9 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 /**--------------------------------------------------------------------------*/
 
 //2. Register new settings to the WP database...
-$wp_customize->add_setting( 'nav_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+$wp_customize->add_setting( 'nav_brand_logo_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
 	array(
-		'default' => '#FFFFFF', //Default setting/value to save
+		'default' => '#000000', //Default setting/value to save
 		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
 		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
 		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
@@ -184,11 +185,11 @@ $wp_customize->add_setting( 'nav_textcolor', //No need to use a SERIALIZED name,
 //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
 $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
 	$wp_customize, //Pass the $wp_customize object (required)
-		'materialpress_nav_textcolor', //Set a unique ID for the control
+		'materialpress_nav_brand_logo_textcolor', //Set a unique ID for the control
 			array(
 				'label' => __( 'Nav Text Color', 'materialpress' ), //Admin-visible name of the control
 				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
-				'settings' => 'nav_textcolor', //Which setting to load and manipulate (serialized is okay)
+				'settings' => 'nav_brand_logo_textcolor', //Which setting to load and manipulate (serialized is okay)
 				'priority' => 104, //Determines the order this control appears in for the specified section
 			)
 ) );
@@ -223,7 +224,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 //2. Register new settings to the WP database...
 $wp_customize->add_setting( 'btn_background_color', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
 	array(
-		'default' => '#26a69a', //Default setting/value to save
+		'default' => '#EA454B', //Default setting/value to save
 		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
 		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
 		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
@@ -248,7 +249,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 //2. Register new settings to the WP database...
 $wp_customize->add_setting( 'btn_hover_background_color', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
 	array(
-		'default' => '#2bbbad', //Default setting/value to save
+		'default' => '#EE6E73', //Default setting/value to save
 		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
 		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
 		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
@@ -273,7 +274,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 //2. Register new settings to the WP database...
 $wp_customize->add_setting( 'card_a_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
 	array(
-		'default' => '#ffab40', //Default setting/value to save
+		'default' => '#FFFFFF', //Default setting/value to save
 		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
 		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
 		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
@@ -298,7 +299,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 //2. Register new settings to the WP database...
 $wp_customize->add_setting( 'card_a_hover_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
 	array(
-		'default' => '#ffd8a6', //Default setting/value to save
+		'default' => '#EDD5D5', //Default setting/value to save
 		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
 		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
 		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
@@ -471,11 +472,11 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 		'background-color',
 		'nav_background_color'
 	);
-	self::generate_css('nav',
-		'nav .brand-logo',
+	self::generate_css('nav .brand-logo',
 		'nav a',
+		'nav',
 		'color',
-		'nav_textcolor'
+		'nav_brand_logo_textcolor'
 	);
 	self::generate_css('html',
 		'color',
@@ -499,11 +500,11 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 	);
 	self::generate_css('.card a',
 		'color',
-		'card_a_background_color'
+		'card_a_textcolor'
 	);
 	self::generate_css('.card a:hover',
 		'color',
-		'card_a_hover_background_color'
+		'card_a_hover_textcolor'
 	);
 	self::generate_css('footer.page-footer',
 		'color',

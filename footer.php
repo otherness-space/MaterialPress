@@ -22,8 +22,10 @@
 		<div class="footer-copyright">
 			<!-- footer-copyright red lighten-1 -->
 			<div class="container">
-				<span class="white-text">© <?php echo date('Y'); ?> Copyright <?php echo get_bloginfo( name ); ?></span>
-			<a class="white-text right truncate" href="#">Back to Top</a>
+				<span class="footer-copyright">© <?php echo date('Y'); ?> Copyright <?php echo get_bloginfo( name ); ?></span>
+				<!-- span class="white-text" -->
+			<a class="footer-copyright right truncate" href="#">Back to Top</a>
+			<!-- a class="white-text" -->
 			</div>
 		</div>
 	</footer>

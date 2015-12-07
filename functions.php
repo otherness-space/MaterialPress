@@ -171,6 +171,31 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 /**--------------------------------------------------------------------------*/
 
 //2. Register new settings to the WP database...
+$wp_customize->add_setting( 'nav_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+	array(
+		'default' => '#FFFFFF', //Default setting/value to save
+		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+		'sanitize_callback' => 'sanitize_hex_color',
+	)
+);
+
+//3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+$wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+	$wp_customize, //Pass the $wp_customize object (required)
+		'materialpress_nav_textcolor', //Set a unique ID for the control
+			array(
+				'label' => __( 'Nav Text Color', 'materialpress' ), //Admin-visible name of the control
+				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+				'settings' => 'nav_textcolor', //Which setting to load and manipulate (serialized is okay)
+				'priority' => 104, //Determines the order this control appears in for the specified section
+			)
+) );
+
+/**--------------------------------------------------------------------------*/
+
+//2. Register new settings to the WP database...
 $wp_customize->add_setting( 'html_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
 	array(
 		'default' => '#000000', //Default setting/value to save
@@ -189,7 +214,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 				'label' => __( 'HTML Text Color', 'materialpress' ), //Admin-visible name of the control
 				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
 				'settings' => 'html_textcolor', //Which setting to load and manipulate (serialized is okay)
-				'priority' => 102, //Determines the order this control appears in for the specified section
+				'priority' => 105, //Determines the order this control appears in for the specified section
 			)
 ) );
 
@@ -214,7 +239,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 				'label' => __( 'Footer Text Color', 'materialpress' ), //Admin-visible name of the control
 				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
 				'settings' => 'footer_textcolor', //Which setting to load and manipulate (serialized is okay)
-				'priority' => 104, //Determines the order this control appears in for the specified section
+				'priority' => 106, //Determines the order this control appears in for the specified section
 			)
 ) );
 
@@ -239,7 +264,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 				'label' => __( 'Footer Background Color', 'materialpress' ), //Admin-visible name of the control
 				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
 				'settings' => 'footer_background_color', //Which setting to load and manipulate (serialized is okay)
-				'priority' => 105, //Determines the order this control appears in for the specified section
+				'priority' => 107, //Determines the order this control appears in for the specified section
 			)
 ) );
 
@@ -264,7 +289,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 				'label' => __( 'Widget Text Color', 'materialpress' ), //Admin-visible name of the control
 				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
 				'settings' => 'footer_widget_textcolor', //Which setting to load and manipulate (serialized is okay)
-				'priority' => 106, //Determines the order this control appears in for the specified section
+				'priority' => 108, //Determines the order this control appears in for the specified section
 			)
 ) );
 
@@ -289,7 +314,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 				'label' => __( 'Footer Copyright Text Color', 'materialpress' ), //Admin-visible name of the control
 				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
 				'settings' => 'footer_copyright_textcolor', //Which setting to load and manipulate (serialized is okay)
-				'priority' => 108, //Determines the order this control appears in for the specified section
+				'priority' => 109, //Determines the order this control appears in for the specified section
 			)
 ) );
 
@@ -314,7 +339,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 				'label' => __( 'Footer Copyright Background Color', 'materialpress' ), //Admin-visible name of the control
 				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
 				'settings' => 'footer_copyright_background_color', //Which setting to load and manipulate (serialized is okay)
-				'priority' => 109, //Determines the order this control appears in for the specified section
+				'priority' => 110, //Determines the order this control appears in for the specified section
 			)
 ) );
 
@@ -344,6 +369,11 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 	self::generate_css('nav',
 		'background-color',
 		'nav_background_color'
+	);
+	self::generate_css('nav',
+		'nav a',
+		'color',
+		'nav_textcolor'
 	);
 	self::generate_css('html',
 		'color',

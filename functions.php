@@ -270,32 +270,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 
 /**--------------------------------------------------------------------------*/
 
-
-//2. Register new settings to the WP database...
-$wp_customize->add_setting( 'h5_footer_widget_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
-	array(
-		'default' => '#FFFFFF', //Default setting/value to save
-		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
-		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
-		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
-		'sanitize_callback' => 'sanitize_hex_color',
-	)
-);
-
-//3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
-$wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
-	$wp_customize, //Pass the $wp_customize object (required)
-		'materialpress_h5_footer_widget_textcolor', //Set a unique ID for the control
-			array(
-				'label' => __( 'H5 Widget Text Color', 'materialpress' ), //Admin-visible name of the control
-				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
-				'settings' => 'h5_footer_widget_textcolor', //Which setting to load and manipulate (serialized is okay)
-				'priority' => 107, //Determines the order this control appears in for the specified section
-			)
-) );
-
-/**--------------------------------------------------------------------------*/
-
 //2. Register new settings to the WP database...
 $wp_customize->add_setting( 'footer_copyright_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
 	array(
@@ -390,10 +364,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 	self::generate_css('.footer-widget',
 		'color',
 		'footer_widget_textcolor'
-	);
-	self::generate_css('h5 .footer-widget truncate',
-		'color',
-		'h5_footer_widget_textcolor'
 	);
 //	self::generate_css('page-footer',
 //		'background-color',

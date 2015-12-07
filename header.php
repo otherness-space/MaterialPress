@@ -24,6 +24,7 @@
 
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/materialize.css" />
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/materialpress.css" />
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/additional.css" />
 
 	<!-- Favicons -->
 	<link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
@@ -33,13 +34,13 @@
 
 	<!-- Android 5 Chrome Color -->
 	<meta name="theme-color" content="#EE6E73">
-	
+
 	<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-	
+
 	<?php wp_head();?>
 </head>
 
-	
+
 <body <?php body_class(); ?>>
 	<nav id="front-page-nav">
 		<div class="container">

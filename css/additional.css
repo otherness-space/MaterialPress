@@ -7,7 +7,9 @@ nav a {
 nav .brand-logo {
   color: #000000;
 }
-
+nav ul a {
+  color: #000000;
+}
 .footer-widget {
   color: #000000;
 }

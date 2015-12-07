@@ -1,4 +1,8 @@
-.footer-widget,  .footer-widget h5 {
+.footer-widget {
+  color: #FFFFFF !important;
+}
+
+h5 .footer-widget {
   color: #FFFFFF !important;
 }
 

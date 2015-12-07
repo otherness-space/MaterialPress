@@ -470,65 +470,51 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 	self::generate_css('nav',
 		'btn waves-effect waves-light right',
 		'background-color',
-		'nav_background_color',
-		'#'
+		'nav_background_color'
 	);
-	self::generate_css('nav .brand-logo',
-		'nav a',
-		'nav',
+	self::generate_css('nav .brand-logo', 'nav a', 'nav',
 		'color',
-		'nav_textcolor',
-		'#'
+		'nav_textcolor'
 	);
 	self::generate_css('html',
 		'color',
-		'html_textcolor',
-		'#'
+		'html_textcolor'
 	);
 	self::generate_css('a',
 		'color',
-		'link_textcolor',
-		'#'
+		'link_textcolor'
 	);
 	self::generate_css('.btn, .btn-large',
 		'color',
-		'link_textcolor',
-		'#'
+		'link_textcolor'
 	);
 	self::generate_css('.btn, .btn-large',
 		'background-color',
-		'btn_background_color',
-		'#'
+		'btn_background_color'
 	);
 	self::generate_css('.btn:hover, .btn-large:hover',
 		'background-color',
-		'btn_hover_background_color',
-		'#'
+		'btn_hover_background_color'
 	);
 	self::generate_css('.card a',
 		'color',
-		'card_a_textcolor',
-		'#'
+		'card_a_textcolor'
 	);
 	self::generate_css('.card a:hover',
 		'color',
-		'card_a_hover_textcolor',
-		'#'
+		'card_a_hover_textcolor'
 	);
 	self::generate_css('footer.page-footer',
 		'color',
-		'footer_textcolor',
-		'#'
+		'footer_textcolor'
 	);
 	self::generate_css('footer.page-footer',
 		'background-color',
-		'footer_background_color',
-		'#'
+		'footer_background_color'
 	);
 	self::generate_css('.footer-widget',
 		'color',
-		'footer_widget_textcolor',
-		'#'
+		'footer_widget_textcolor'
 	);
 //	self::generate_css('page-footer',
 //		'background-color',
@@ -536,13 +522,11 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 //	);
 	self::generate_css('footer.page-footer .footer-copyright',
 		'color',
-		'footer_copyright_textcolor',
-		'#'
+		'footer_copyright_textcolor'
 	);
 	self::generate_css('footer.page-footer .footer-copyright',
 		'background-color',
-		'footer_copyright_background_color',
-		'#'
+		'footer_copyright_background_color'
 	);
 ?>
 </style>

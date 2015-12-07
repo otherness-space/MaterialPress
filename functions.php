@@ -271,9 +271,9 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 /**--------------------------------------------------------------------------*/
 
 //2. Register new settings to the WP database...
-$wp_customize->add_setting( 'btn_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+$wp_customize->add_setting( 'card_a_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
 	array(
-		'default' => '#FFFFFF', //Default setting/value to save
+		'default' => '#ffab40', //Default setting/value to save
 		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
 		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
 		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
@@ -284,11 +284,36 @@ $wp_customize->add_setting( 'btn_textcolor', //No need to use a SERIALIZED name,
 //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
 $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
 	$wp_customize, //Pass the $wp_customize object (required)
-		'materialpress_btn_textcolor', //Set a unique ID for the control
+		'materialpress_card_a_textcolor', //Set a unique ID for the control
 			array(
-				'label' => __( 'BTN Text Color', 'materialpress' ), //Admin-visible name of the control
+				'label' => __( 'Card a Text Color', 'materialpress' ), //Admin-visible name of the control
 				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
-				'settings' => 'btn_textcolor', //Which setting to load and manipulate (serialized is okay)
+				'settings' => 'card_a_textcolor', //Which setting to load and manipulate (serialized is okay)
+				'priority' => 114, //Determines the order this control appears in for the specified section
+			)
+) );
+
+/**--------------------------------------------------------------------------*/
+
+//2. Register new settings to the WP database...
+$wp_customize->add_setting( 'card_a_hover_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+	array(
+		'default' => '#ffd8a6', //Default setting/value to save
+		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+		'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+		'transport' => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+		'sanitize_callback' => 'sanitize_hex_color',
+	)
+);
+
+//3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+$wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+	$wp_customize, //Pass the $wp_customize object (required)
+		'materialpress_card_a_hover_textcolor', //Set a unique ID for the control
+			array(
+				'label' => __( 'Card a Hover Text Color', 'materialpress' ), //Admin-visible name of the control
+				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+				'settings' => 'card_a_hover_textcolor', //Which setting to load and manipulate (serialized is okay)
 				'priority' => 114, //Determines the order this control appears in for the specified section
 			)
 ) );
@@ -447,6 +472,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 		'nav_background_color'
 	);
 	self::generate_css('nav',
+		'nav .brand-logo',
 		'nav a',
 		'color',
 		'nav_textcolor'
@@ -470,6 +496,14 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 	self::generate_css('.btn:hover, .btn-large:hover',
 		'background-color',
 		'btn_hover_background_color'
+	);
+	self::generate_css('.card a',
+		'color',
+		'card_a_background_color'
+	);
+	self::generate_css('.card a:hover',
+		'color',
+		'card_a_hover_background_color'
 	);
 	self::generate_css('footer.page-footer',
 		'color',

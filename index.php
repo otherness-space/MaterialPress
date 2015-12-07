@@ -8,11 +8,11 @@
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="card">
 				<div class="card-content">
-					<a href="<?php the_permalink(); ?>"><span class="card-title black-text"><?php the_title(); ?></span></a>				
+					<a href="<?php the_permalink(); ?>"><span class="card-title black-text"><?php the_title(); ?></span></a>
 					<?php the_content(); ?>
 				</div>
 				<div class="card-action">
-					<a href='<?php the_permalink(); ?>' class="btn waves-effect waves-light red lighten-1 white-text right">Open</a>
+					<a href='<?php the_permalink(); ?>' class="btn waves-effect waves-light right">Open</a>
 				</div>
 			</div>
 		</article>
@@ -21,4 +21,3 @@
 	</div>
 </div>
 <?php get_footer();?>
-

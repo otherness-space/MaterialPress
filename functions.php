@@ -172,7 +172,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 /**--------------------------------------------------------------------------*/
 
 //2. Register new settings to the WP database...
-$wp_customize->add_setting( 'nav_brand_logo_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+$wp_customize->add_setting( 'nav_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
 	array(
 		'default' => '#000000', //Default setting/value to save
 		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
@@ -185,11 +185,11 @@ $wp_customize->add_setting( 'nav_brand_logo_textcolor', //No need to use a SERIA
 //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
 $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
 	$wp_customize, //Pass the $wp_customize object (required)
-		'materialpress_nav_brand_logo_textcolor', //Set a unique ID for the control
+		'materialpress_nav_textcolor', //Set a unique ID for the control
 			array(
 				'label' => __( 'Nav Text Color', 'materialpress' ), //Admin-visible name of the control
 				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
-				'settings' => 'nav_brand_logo_textcolor', //Which setting to load and manipulate (serialized is okay)
+				'settings' => 'nav_textcolor', //Which setting to load and manipulate (serialized is okay)
 				'priority' => 104, //Determines the order this control appears in for the specified section
 			)
 ) );
@@ -476,7 +476,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 		'nav a',
 		'nav',
 		'color',
-		'nav_brand_logo_textcolor'
+		'nav_textcolor'
 	);
 	self::generate_css('html',
 		'color',

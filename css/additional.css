@@ -1,9 +1,13 @@
+nav .brand-logo {
+  color: #FFFFFF;
+}
+
 .footer-widget {
   color: #FFFFFF;
 }
 
 /**--------------------------------------------------------------------------*/
-code, p-pre {
+code, pre {
 	display: flex;
 	box-sizing: border-box;
 	padding: 5px 5px 15px;
@@ -29,7 +33,7 @@ code:hover {
 	border-radius: 10px 10px 5px 5px;
 }
 */
-p-pre {
+pre {
 	margin: 1%;
 	border: solid 1px #000000;
 	border-radius: 7px;

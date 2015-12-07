@@ -71,7 +71,7 @@ function materialpress_widgets() {
 		'id'            => 'footer-widgetize-1',
 		'before_widget' => '<div class="footer-widget">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h5 class="widget-text truncate">',
+		'before_title'  => '<h5 class="footer-widget truncate">',
 		'after_title'   => '</h5>',
 	) );
 
@@ -80,7 +80,7 @@ function materialpress_widgets() {
 		'id'            => 'footer-widgetize-2',
 		'before_widget' => '<div class="footer-widget">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h5 class="widget-text truncate">',
+		'before_title'  => '<h5 class="footer-widget truncate">',
 		'after_title'   => '</h5>',
 	) );
 
@@ -89,7 +89,7 @@ function materialpress_widgets() {
 		'id'            => 'footer-widgetize-3',
 		'before_widget' => '<div class="footer-widget">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h5 class="widget-text truncate">',
+		'before_title'  => '<h5 class="footer-widget truncate">',
 		'after_title'   => '</h5>',
 	) );
 
@@ -246,7 +246,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 /**--------------------------------------------------------------------------*/
 
 //2. Register new settings to the WP database...
-$wp_customize->add_setting( 'widget_text_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+$wp_customize->add_setting( 'footer_widget_textcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
 	array(
 		'default' => '#FFFFFF', //Default setting/value to save
 		'type' => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
@@ -259,11 +259,11 @@ $wp_customize->add_setting( 'widget_text_textcolor', //No need to use a SERIALIZ
 //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
 $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
 	$wp_customize, //Pass the $wp_customize object (required)
-		'materialpress_widget_text_textcolor', //Set a unique ID for the control
+		'materialpress_footer_widget_textcolor', //Set a unique ID for the control
 			array(
 				'label' => __( 'Widget Text Color', 'materialpress' ), //Admin-visible name of the control
 				'section' => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
-				'settings' => 'widget_text_textcolor', //Which setting to load and manipulate (serialized is okay)
+				'settings' => 'footer_widget_textcolor', //Which setting to load and manipulate (serialized is okay)
 				'priority' => 106, //Determines the order this control appears in for the specified section
 			)
 ) );
@@ -361,9 +361,9 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 		'background-color',
 		'footer_background_color'
 	);
-	self::generate_css('widget-text truncate',
+	self::generate_css('footer-widget truncate',
 		'color',
-		'widget_text_textcolor'
+		'footer-widget_textcolor'
 	);
 //	self::generate_css('page-footer',
 //		'background-color',

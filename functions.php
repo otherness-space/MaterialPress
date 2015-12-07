@@ -468,11 +468,12 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 		'#'
 	);
 	self::generate_css('nav',
-		'btn waves-effect waves-light right',
 		'background-color',
 		'nav_background_color'
 	);
-	self::generate_css('nav .brand-logo', 'nav a', 'nav',
+	self::generate_css('nav .brand-logo',
+		'nav a',
+		'nav',
 		'color',
 		'nav_textcolor'
 	);

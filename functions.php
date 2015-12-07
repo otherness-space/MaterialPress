@@ -387,11 +387,11 @@ $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the co
 		'background-color',
 		'footer_background_color'
 	);
-	self::generate_css('footer-widget',
+	self::generate_css('.footer-widget',
 		'color',
 		'footer_widget_textcolor'
 	);
-	self::generate_css('h5 footer-widget truncate',
+	self::generate_css('h5 .footer-widget truncate',
 		'color',
 		'h5_footer_widget_textcolor'
 	);

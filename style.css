@@ -9,12 +9,19 @@ License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 GitHub Theme URI: https://github.com/alexpatin/MaterialPress
 GitHub Branch: master
+GitHub Theme URI Fork : https://github.com/otherness-space/MaterialPress
+GitHub Fork Branch : working-2015.12.08-pagination-0.0.0.2
 Text Domain: materialpress
 
 ------------------------------------------------------------------
 
 This file is only being used for core WordPress styles,
 so feel free to use it to leave notes to yourself.
+
+-------------------------------------------------------------------------------
+There is not a working pagination function at this time, it is the next phase of
+what I am planning for this fork.
+-------------------------------------------------------------------------------
 
 *******************************************************************
 
@@ -96,3 +103,9 @@ a img.aligncenter {
     margin: 0;
     padding: 0 4px 5px;
 }
+
+/** ------------------------------------------------------------------------ */
+
+
+
+/** ------------------------------------------------------------------------ */

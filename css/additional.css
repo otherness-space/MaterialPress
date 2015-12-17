@@ -306,24 +306,10 @@ ul.side-nav a {
   }
 }
 
-@media  only screen and (max-width: 1168px) {
+@media  only screen and (max-width: 1169px) {
   .waves-effect {
     display: block;
   }
-  nav .brand-logo {
-    text-align: center;
-    z-index: 999;
-  }
-}
-@media only screen and (min-width: 1160px) {
-  nav .nav-wrapper {
-    position: relative;
-    top: 10px;
-    height: 100%;
-    justify-content: space-around;
-  }
-}
-@media only screen and (max-width: 992px) {
   nav .brand-logo {
     top: 35px;
     left: 50%;
@@ -333,8 +319,20 @@ ul.side-nav a {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-
+    text-align: center;
+    z-index: 999;
   }
+}
+@media only screen and (min-width: 1169px) {
+  nav .nav-wrapper {
+    position: relative;
+    top: 10px;
+    height: 100%;
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 992px) {
+
 }
 @media only screen and (min-width: 601px) {
   nav .brand-logo {

@@ -2120,7 +2120,7 @@ ul.staggered-list li {
   .hide-on-small-only, .hide-on-small-and-down {
     display: none !important; } }
 
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width : 1000px) {
   .hide-on-med-and-down {
     display: none !important; } }
 

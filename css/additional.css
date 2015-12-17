@@ -38,10 +38,11 @@ nav .nav-wrapper i {
   font-size: 2rem;
 }
 
-/**  @media only screen and (min-width : 993px) {
-    nav a.button-collapse {
-      display: none; }
- } */
+@media only screen and (min-width: 1169px) {
+  nav a.button-collapse {
+    display: none;
+  }
+}
 
 nav a.button-collapse {
   float: left;
@@ -299,12 +300,6 @@ ul.side-nav a {
     nav a.button-collapse {
       display: none; }
  } */
-
-@media only screen and (min-width: 1169px) {
-  nav a.button-collapse {
-    display: none;
-  }
-}
 
 @media  only screen and (max-width: 1169px) {
   .waves-effect {

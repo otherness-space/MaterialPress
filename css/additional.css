@@ -38,11 +38,10 @@ nav .nav-wrapper i {
   font-size: 2rem;
 }
 
-@media only screen and (min-width: 1169px) {
-  nav a.button-collapse {
-    display: none;
-  }
-}
+/**  @media only screen and (min-width : 993px) {
+    nav a.button-collapse {
+      display: none; }
+ } */
 
 nav a.button-collapse {
   float: left;
@@ -350,6 +349,15 @@ ul.side-nav a {
     text-align: right;
   }
 }
+
+@media only screen and (min-width: 1169px) {
+  nav a.button-collapse {
+    display: none;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+
 article ul {
   list-style-type: disc;
   margin-bottom: 15px;

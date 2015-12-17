@@ -17,7 +17,11 @@
 			</div>
 		</article>
 
-		<?php endwhile; // End the loop ?>
+		<?php endwhile;
+
+		the_posts_navigation();
+
+		// End the loop ?>
 	</div>
 </div>
 <?php get_footer();?>

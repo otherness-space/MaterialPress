@@ -2120,7 +2120,7 @@ ul.staggered-list li {
   .hide-on-small-only, .hide-on-small-and-down {
     display: none !important; } }
 
-@media only screen and (max-width : 1000px) {
+@media only screen and (max-width : 992px) {
   .hide-on-med-and-down {
     display: none !important; } }
 
@@ -2168,8 +2168,8 @@ footer.page-footer {
     overflow: hidden;
     height: 50px;
     line-height: 50px;
-    color: #FFFFFF;
-    background-color: #ea454b; }
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(51, 51, 51, 0.08); }
 
 table, th, td {
   border: none; }
@@ -5055,14 +5055,14 @@ span.badge {
  }
 
 nav {
-  color: #FFFFFF;
+  color: #fff;
   background-color: #ee6e73;
   width: 100%;
   height: 56px;
   line-height: 56px;
   overflow: hidden; }
   nav a {
-    color: #FFFFFF; }
+    color: #fff; }
   nav .nav-wrapper {
     position: relative;
     height: 100%; }
@@ -5077,14 +5077,14 @@ nav {
     position: relative;
     z-index: 1;
     height: 56px;
-    color: #FFFFFF; }
+    color: #fff; }
     nav a.button-collapse i {
       font-size: 2.7rem;
       height: 56px;
       line-height: 56px; }
   nav .brand-logo {
     position: absolute;
-    color: #FFFFFF;
+    color: #fff;
     display: inline-block;
     font-size: 2.1rem;
     padding: 0; }
@@ -5209,7 +5209,7 @@ html {
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
-  color: #000000; }
+  color: rgba(0, 0, 0, 0.87); }
   @media only screen and (min-width: 0) {
     html {
       font-size: 14px; } }
@@ -5696,7 +5696,7 @@ ul.tabs li.tab {
 
 .btn, .btn-large {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #FFF;
   background-color: #26a69a;
   text-align: center;
   letter-spacing: 0.5px;

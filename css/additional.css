@@ -304,8 +304,15 @@ ul.side-nav a {
   nav a.button-collapse {
     display: none;
   }
+}
+
+@media  only screen and (max-width: 1168px) {
   .waves-effect {
     display: block;
+  }
+  nav .brand-logo {
+    text-align: center;
+    z-index: 999;
   }
 }
 @media only screen and (min-width: 1160px) {
@@ -326,8 +333,7 @@ ul.side-nav a {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 999;
+
   }
 }
 @media only screen and (min-width: 601px) {

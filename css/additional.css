@@ -33,7 +33,7 @@ nav {
  nav a.button-collapse {
    float: left;
    position: relative;
-   z-index: 1;
+   z-index: 999;
    height: 56px;
    color: #FFFFFF; }
    nav a.button-collapse i {
@@ -51,7 +51,6 @@ nav {
   margin: 0 0 10px 0;
   color: inherit; }
 
-
 nav .brand-logo.center {
   top: 50%;
   left: 50%;
@@ -60,6 +59,14 @@ nav .brand-logo.center {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+
+/** 5123 */
+
+nav ul a {
+  font-size: 1rem;
+  color: #FFFF;
+  display: inline-block;
+  padding: 0 15px; }
 
 /** 5208 */
 html {
@@ -76,6 +83,70 @@ html {
   @media only screen and (min-width: 1200px) {
     html {
       font-size: 15px; } }
+
+/** materialize.css 5478
+*
+* This is important because if it is not accessible but visible it looks like a
+* menu button that doesn't work for mobile. This issue was resolved with this
+* file's at 33 nav a.button-collapse {z-index: 999}
+* However the side-nav is still jacked too high off screen...
+*
+*/
+.mdi-navigation-menu:before {
+  content: "\e8a1"; }
+/**
+*
+* header.php 73
+* page-components.php 527
+* <a class="button-collapse" href="#" data-activates='nav-mobile'><i class="mdi-navigation-menu"></i></a>
+*
+* page-components.php 547
+* <pre><code class="language-markup col s12">
+*   &lt;nav>
+*     &lt;div class="nav-wrapper">
+*       &lt;a href="#" class="brand-logo">Logo&lt;/a>
+*         &lt;ul id="nav-mobile" class="right side-nav">
+*           &lt;li>&lt;a href="sass.html">Sass&lt;/a>&lt;/li>
+*             &lt;li>&lt;a href="components.html">Components&lt;/a>&lt;/li>
+*           &lt;li>&lt;a href="javascript.html">JavaScript&lt;/a>&lt;/li>
+*         &lt;/ul>
+* ====> &lt;a class="button-collapse" href="#" data-activates="nav-mobile">&lt;i class="mdi-navigation-menu">&lt;/i>&lt;/a>
+*     &lt;/div>
+*   &lt;/nav>
+* </code></pre>
+*
+* page-components.php 527
+* <nav>
+*   <div class="nav-wrapper">
+*     <div class="col s12">
+*       <a href="#!" class="brand-logo right">Logo</a>
+* =====> <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
+*         <ul class="left side-nav">
+*         <li><a href="sass.html">Sass</a></li>
+*         <li><a href="components.html">Components</a></li>
+*         <li><a href="javascript.html">JavaScript</a></li>
+*       </ul>
+*     </div>
+*   </div>
+* </nav>
+*
+* page-comnents.php 570
+*
+* <pre><code class="language-markup col s12">
+*   &lt;nav>
+*     &lt;div class="nav-wrapper">
+*       &lt;a href="#" class="brand-logo right">Logo&lt;/a>
+*         &lt;ul id="nav-mobile" class="left side-nav">
+*           &lt;li>&lt;a href="sass.html">Sass&lt;/a>&lt;/li>
+*             &lt;li>&lt;a href="components.html">Components&lt;/a>&lt;/li>
+*           &lt;li>&lt;a href="javascript.html">JavaScript&lt;/a>&lt;/li>
+*         &lt;/ul>
+* ====> &lt;a class="button-collapse" href="#" data-activates="nav-mobile">&lt;i class="mdi-navigation-menu">&lt;/i>&lt;/a>
+*     &lt;/div>
+*   &lt;/nav>
+* </code></pre>
+*/
+
 
 /** 5696 */
 
@@ -126,6 +197,56 @@ html {
     height: 55.5px; }
     .btn-floating.btn-large i {
       line-height: 55.5px; }
+
+/** 5813 */
+
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  will-change: opacity, transform;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+/** 6754 */
+ul.side-nav {
+  position: fixed;
+  width: 240px;
+  left: -105%;
+  top: 0;
+  margin: 0;
+  height: 100%;
+  height: calc(100% + 60px);
+  padding-bottom: 60px;
+  background-color: #FFF;
+  z-index: 999;
+  will-change: left; }
+  ul.side-nav.right-aligned {
+    will-change: right;
+    right: -105%;
+    left: auto; }
+  ul.side-nav .collapsible {
+    margin: 0; }
+  ul.side-nav li {
+    float: none;
+    padding: 0 15px; }
+    ul.side-nav li:hover, ul.side-nav li.active {
+      background-color: #ddd; }
+  ul.side-nav a {
+    color: #444; }
+
+
 /** ------------------------------------------------------------------------- */
 
   @media only screen and (max-width : 1170px) {
@@ -133,9 +254,12 @@ html {
       display: none !important; }
   }
 
-  @media only screen and (min-width : 1170px) {
+  @media only screen and (min-width : 1169px) {
     nav a.button-collapse {
       display: none; }
+    .waves-effect {
+      display: block;
+    }
   }
   @media only screen and (min-width : 1160px) {
     nav .nav-wrapper {

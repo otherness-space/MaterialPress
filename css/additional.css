@@ -26,10 +26,10 @@ nav {
     height: 100%; }
     nav .nav-wrapper i {
       font-size: 2rem; }
-  @media only screen and (min-width : 993px) {
+/**  @media only screen and (min-width : 993px) {
     nav a.button-collapse {
       display: none; }
- }
+ } */
  nav a.button-collapse {
    float: left;
    position: relative;

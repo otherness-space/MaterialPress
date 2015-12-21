@@ -55,29 +55,29 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 	- [ ] Possible hard-coded links were found in the file page-components.php.
 
 		- [ ] 	Line 529: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 543: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 561: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 575: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 530: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 544: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 562: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 576: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 531: &#60;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 545: &lt;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 563: &#60;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 577: &lt;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 529: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 543: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 561: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 575: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 530: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 544: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 562: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 576: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 531: &#60;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 545: &lt;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 563: &#60;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 577: &lt;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 543: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 561: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 575: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 530: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 544: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 562: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 576: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 531: &#60;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 545: &lt;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 563: &#60;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 577: &lt;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 529: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 543: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 561: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 575: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 530: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 544: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 562: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 576: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 531: &#60;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 545: &lt;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 563: &#60;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 577: &lt;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
 
 	- [ ] Only one text-domain is being used in this theme. Make sure it matches the theme's slug correctly so that the theme will be compatible with WordPress.org language packs.
 The domain found is materialpress

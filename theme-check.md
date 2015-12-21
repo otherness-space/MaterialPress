@@ -5,26 +5,38 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 
 - [ ] REQUIRED:
 	- [ ] .sticky css class is needed in your theme css.
+
 	- [ ] .screen-reader-text css class is needed in your theme css. See See: [the Codex](http://codex.wordpress.org/CSS#WordPress_Generated_Classes) for an example implementation.
+
 	- [ ] .gallery-caption css class is needed in your theme css.
+
 	- [ ] .bypostauthor css class is needed in your theme css.
+
 	- [ ] The theme doesn't have post pagination code in it. Use posts_nav_link() or paginate_links() or the_posts_pagination() or the_posts_navigation() or next_posts_link() and previous_posts_link() to add post pagination.
+
 	- [ ] The theme doesn't have comment pagination code in it. Use paginate_comments_links() or the_comments_navigation or next_comments_link() and previous_comments_link() to add comment pagination.
+
 	- [ ] The <title> tags can only contain a call to wp_title(). Use the wp_title filter to modify the output.
 
 	- [ ] Found a Customizer setting that did not have a sanitization callback function. Every call to the add_setting() method needs to have a sanitization callback function passed.
-	
+
 	- [ ] Could not find the comment-reply script enqueued. See:
 	[Migrating Plugins and Themes to 2.7/Enhanced Comment Display](https://codex.wordpress.org/Migrating_Plugins_and_Themes_to_2.7/Enhanced_Comment_Display)
 
  &#60;&#63;php if ( is_singular() ) wp_enqueue_script( "comment-reply" );&#32;&#63;&#62;
 
 	- [ ] Could not find wp_link_pages. See: [wp_link_pages](https://codex.wordpress.org/Function_Reference/wp_link_pages)
+
  &#60;&#63;php wp_link_pages( $args );&#32;&#63;&#62;
+
 	- [ ] Could not find comments_template. See: [comments_template](https://codex.wordpress.org/Template_Tags/comments_template)
+
  &#60;&#63;php comments_template( $file, $separate_comments );&#32;&#63;&#62;
+
 	- [ ] Could not find add_theme_support( 'automatic-feed-links' ). See: [add_theme_support](https://codex.wordpress.org/Function_Reference/add_theme_support)
+
  &#60;&#63;php add_theme_support( $feature );&#32;&#63;&#62;
+ 
 	- [ ] add_theme_support( post-formats was found in the file functions.php. However get_post_format and/or has_post_format were not found, and no use of formats in the CSS was detected.
 
 - [ ] RECOMMENDED:

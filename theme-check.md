@@ -16,7 +16,7 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 
 	- [ ] The theme doesn't have comment pagination code in it. Use paginate_comments_links() or the_comments_navigation or next_comments_link() and previous_comments_link() to add comment pagination.
 
-	- [ ] The <title> tags can only contain a call to wp_title(). Use the wp_title filter to modify the output.
+	- [ ] The &#60;title&#62; tags can only contain a call to wp_title(). Use the wp_title filter to modify the output.
 
 	- [ ] Found a Customizer setting that did not have a sanitization callback function. Every call to the add_setting() method needs to have a sanitization callback function passed.
 
@@ -36,7 +36,7 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 	- [ ] Could not find add_theme_support( 'automatic-feed-links' ). See: [add_theme_support](https://codex.wordpress.org/Function_Reference/add_theme_support)
 
  &#60;&#63;php add_theme_support( $feature );&#32;&#63;&#62;
- 
+
 	- [ ] add_theme_support( post-formats was found in the file functions.php. However get_post_format and/or has_post_format were not found, and no use of formats in the CSS was detected.
 
 - [ ] RECOMMENDED:

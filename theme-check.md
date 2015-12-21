@@ -11,7 +11,9 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 	- [ ] The theme doesn't have post pagination code in it. Use posts_nav_link() or paginate_links() or the_posts_pagination() or the_posts_navigation() or next_posts_link() and previous_posts_link() to add post pagination.
 	- [ ] The theme doesn't have comment pagination code in it. Use paginate_comments_links() or the_comments_navigation or next_comments_link() and previous_comments_link() to add comment pagination.
 	- [ ] The <title> tags can only contain a call to wp_title(). Use the wp_title filter to modify the output.
+
 	- [ ] Found a Customizer setting that did not have a sanitization callback function. Every call to the add_setting() method needs to have a sanitization callback function passed.
+	
 	- [ ] Could not find the comment-reply script enqueued. See:
 	[Migrating Plugins and Themes to 2.7/Enhanced Comment Display](https://codex.wordpress.org/Migrating_Plugins_and_Themes_to_2.7/Enhanced_Comment_Display)
 

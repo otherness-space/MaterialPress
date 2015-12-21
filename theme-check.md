@@ -54,10 +54,10 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 
 	- [ ] Possible hard-coded links were found in the file page-components.php.
 
-	Line 529: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 543: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 561: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-	Line 575: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
+	Line 529: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;&#13;
+	Line 543: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;&#13;
+	Line 561: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;&#13;
+	Line 575: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;&#13;
 	Line 530: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
 	Line 544: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
 	Line 562: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;

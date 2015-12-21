@@ -2,6 +2,7 @@
 
 <div class="section no-pad-bot main" id="index-banner">
 	<div class="container">
+
 		<?php /* Start loop */ ?>
 		<?php while (have_posts()) : the_post(); ?>
 
@@ -22,6 +23,7 @@
 		the_posts_navigation();
 
 		// End the loop ?>
+
 	</div>
 </div>
 <?php get_footer();?>

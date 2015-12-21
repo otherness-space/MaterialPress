@@ -45,7 +45,7 @@
 	<nav id="front-page-nav">
 		<div class="container">
 			<div class="nav-wrapper">
-				<a href="<?php echo site_url(); ?>" class="brand-logo waves-effect waves-light" id="logo-container"><?php echo get_bloginfo( name ); ?></a>
+				<a href="<?php echo site_url(); ?>" class="flow-text brand-logo waves-effect waves-light" id="logo-container"><?php echo get_bloginfo( name ); ?></a>
 				<?php $menu_args = array(
 					'theme_location'    => 'primary',
 					'container'         => 'ul',

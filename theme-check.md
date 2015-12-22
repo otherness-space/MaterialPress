@@ -30,19 +30,19 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 	- [ ] Could not find ```wp_link_pages```. See: [wp_link_pages](https://codex.wordpress.org/Function_Reference/wp_link_pages)
 
 	```php
-  <?php wp_link_pages( $args ); ?>
+  	<?php wp_link_pages( $args ); ?>
   ```
 
 	- [ ] Could not find ```comments_template```. See: [comments_template](https://codex.wordpress.org/Template_Tags/comments_template)
 
 	```php
-  <?php comments_template( $file, $separate_comments ); ?>
+  	<?php comments_template( $file, $separate_comments ); ?>
   ```
 
 	- [ ] Could not find ```add_theme_support( 'automatic-feed-links' )```. See: [add_theme_support](https://codex.wordpress.org/Function_Reference/add_theme_support)
 
 	```php
-  <?php add_theme_support( $feature ); ?>
+  	<?php add_theme_support( $feature ); ?>
   ```
 
 	- [ ] ```add_theme_support(``` post-formats was found in the file functions.php. However ```get_post_format``` and/or ```has_post_format``` were not found, and no use of formats in the CSS was detected.

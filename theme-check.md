@@ -63,7 +63,7 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 		- [ ] Line 543: ```<li><a href'=sass.html'>```Sass```</a></li>```
 		- [ ] Line 561: ```<li><a href'=sass.html'>```Sass```</a></li>```
 		- [ ] Line 575: ```<li><a href'=sass.html'>```Sass```</a></li>```
-		- [ ] Line 530: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 530: ```<li><a href'=components.html'>```Components</a></li>
 		- [ ] Line 544: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
 		- [ ] Line 562: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
 		- [ ] Line 576: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;

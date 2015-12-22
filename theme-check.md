@@ -6,11 +6,11 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 - [ ] REQUIRED:
 	- [ ] ```.sticky``` css class is needed in your theme css.
 
-	- [ ] .screen-reader-text css class is needed in your theme css. See See: [the Codex](http://codex.wordpress.org/CSS#WordPress_Generated_Classes) for an example implementation.
+	- [ ] ```.screen-reader-text``` css class is needed in your theme css. See See: [the Codex](http://codex.wordpress.org/CSS#WordPress_Generated_Classes) for an example implementation.
 
-	- [ ] .gallery-caption css class is needed in your theme css.
+	- [ ] ```.gallery-caption``` css class is needed in your theme css.
 
-	- [ ] .bypostauthor css class is needed in your theme css.
+	- [ ] ```.bypostauthor``` css class is needed in your theme css.
 
 	- [ ] The theme doesn't have post pagination code in it. Use posts_nav_link() or paginate_links() or the_posts_pagination() or the_posts_navigation() or next_posts_link() and previous_posts_link() to add post pagination.
 

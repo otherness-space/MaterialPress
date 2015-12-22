@@ -24,7 +24,7 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 	[Migrating Plugins and Themes to 2.7/Enhanced Comment Display](https://codex.wordpress.org/Migrating_Plugins_and_Themes_to_2.7/Enhanced_Comment_Display)
 
 	```php
-  <?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
+  	<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
   ```
 
 	- [ ] Could not find ```wp_link_pages```. See: [wp_link_pages](https://codex.wordpress.org/Function_Reference/wp_link_pages)

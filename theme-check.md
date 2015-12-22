@@ -1,4 +1,4 @@
-[] - REQUIRED
+[ ] - REQUIRED
 
 	- [ ] REQUIRED: `.sticky` css class is needed in your theme css.
 
@@ -61,7 +61,7 @@
 	- [ ] RECOMMENDED:  Tags: is either empty or missing in style.css header.
 
 	- [ ] INFO:  Possible hard-coded links were found in the file page-components.php.
-	
+
 Line 529: `<li><a href='sass.html'>Sass</a></li>`
 Line 543: `&lt;li>&lt;a href='sass.html'>Sass&lt;/a>&lt;/li>`
 Line 561: `<li><a href='sass.html'>Sass</a></li>`

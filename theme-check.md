@@ -4,7 +4,7 @@ Theme Check is maintained by [Otto42](https://profiles.wordpress.org/otto42/) an
 MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 
 - [ ] REQUIRED:
-	- [ ] .sticky css class is needed in your theme css.
+	- [ ] ```.sticky``` css class is needed in your theme css.
 
 	- [ ] .screen-reader-text css class is needed in your theme css. See See: [the Codex](http://codex.wordpress.org/CSS#WordPress_Generated_Classes) for an example implementation.
 

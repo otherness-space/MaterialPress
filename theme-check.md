@@ -64,29 +64,31 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 		- [ ] Line 561: ```<li><a href'=sass.html'>```Sass```</a></li>```
 		- [ ] Line 575: ```<li><a href'=sass.html'>```Sass```</a></li>```
 		- [ ] Line 530: ```<li><a href'=components.html'>```Components```</a></li>```
-		- [ ] Line 544: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 562: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 576: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 531: &#60;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 545: &lt;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 563: &#60;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 577: &lt;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 529: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 543: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 561: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 575: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 530: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 544: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 562: &#60;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 576: &lt;li&#62;&#60;a href&#39;&#61;components.html&#39;&#62;Components&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 531: &#60;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 545: &lt;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 563: &#60;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
-		- [ ] Line 577: &lt;li&#62;&#60;a href&#39;&#61;javascript.html&#39;&#62;JavaScript&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 544: ```<li><a href'=components.html'>```Components```</a></li>```
+		- [ ] Line 562: ```<li><a href'=components.html'>```Components```</a></li>```
+		- [ ] Line 576: ```<li><a href'=components.html'>```Components```</a></li>```
+		- [ ] Line 531: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
+		- [ ] Line 545: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
+		- [ ] Line 563: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
+		- [ ] Line 577: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
+		- [ ] Line 529: ```<li><a href'=sass.html'>```Sass```</a></li>```
+		- [ ] Line 543: ```<li><a href'=sass.html'>```Sass```</a></li>```
+		- [ ] Line 561: ```<li><a href'=sass.html'>```Sass```</a></li>```
+		- [ ] Line 575: ```<li><a href'=sass.html'>```Sass```</a></li>```
+		- [ ] Line 530: ```<li><a href'=components.html'>```Components```</a></li>```
+		- [ ] Line 544: ```<li><a href'=components.html'>```Components```</a></li>```
+		- [ ] Line 562: ```<li><a href'=components.html'>```Components```</a></li>```
+		- [ ] Line 576: ```<li><a href'=components.html'>```Components```</a></li>```
+		- [ ] Line 531: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
+		- [ ] Line 545: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
+		- [ ] Line 563: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
+		- [ ] Line 577: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
 
 	- [ ] Only one text-domain is being used in this theme. Make sure it matches the theme's slug correctly so that the theme will be compatible with WordPress.org language packs.
 The domain found is materialpress
 	- [ ] Non-printable characters were found in the page-components.php file. You may want to check this file for errors.
-Line 614: &#60;p class&#39;&#61;caption&#39;&#62;Cards are a convenient means of displaying content composed of different types of objects. They���re also well-suited for presenting similar objects whose size or support
+
+Line 614: ```<p class'=caption'>```Cards are a convenient means of displaying content composed of different types of objects. They���re also well-suited for presenting similar objects whose size or support
 	- [ ] Non-printable characters were found in the footer.php file. You may want to check this file for errors.
-Line 23: &#60;span class&#39;&#61;white-text&#39;&#62;�� &#60;&#63;php echo date&#40;&#39;Y&#39;&#41;&#59;&#32;&#63;&#62; Copyright &#60;&#63;php echo get&#95;bloginfo&#40; name &#41;&#59;&#32;&#63;&#62;&#60;&#47;
+
+Line 23: ```<span class'=white-text'>�� <?php echo date('Y'); ?>``` Copyright ```<?php echo get_bloginfo( name ); ?></```

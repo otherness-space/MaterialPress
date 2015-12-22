@@ -1,40 +1,67 @@
 [] - REQUIRED
+
 	- [ ] REQUIRED: `.sticky` css class is needed in your theme css.
+
 	- [ ] REQUIRED: `.screen-reader-text` css class is needed in your theme css. See See: [the Codex](http://codex.wordpress.org/CSS#WordPress_Generated_Classes) for an example implementation.
+
 	- [ ] REQUIRED: `.gallery-caption` css class is needed in your theme css.
+
 	- [ ] REQUIRED: `.bypostauthor` css class is needed in your theme css.
+
 	- [ ] REQUIRED:  The theme doesn't have post pagination code in it. Use `posts_nav_link()` or `paginate_links()` or `the_posts_pagination()` or `the_posts_navigation()` or `next_posts_link()` and `previous_posts_link()` to add post pagination.
+
 	- [ ] REQUIRED:  The theme doesn't have comment pagination code in it. Use `paginate_comments_links()` or `the_comments_navigation or next_comments_link()` and `previous_comments_link()` to add comment pagination.
+
 	- [ ] REQUIRED:  The <title> tags can only contain a call to `wp_title()`. Use the `wp_title` filter to modify the output
+
 	- [ ] REQUIRED:  Found a Customizer setting that did not have a sanitization callback function. Every call to the `add_setting()` method needs to have a sanitization callback function passed.
+
 	- [ ] REQUIRED:  Could not find the comment-reply script enqueued. See: [Migrating Plugins and Themes to 2.7/Enhanced Comment Display](https://codex.wordpress.org/Migrating_Plugins_and_Themes_to_2.7/Enhanced_Comment_Display)
+
   ```php
   <?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
   ```
+
 	- [ ] REQUIRED:  Could not find wp_link_pages. See: [wp_link_pages](https://codex.wordpress.org/Function_Reference/wp_link_pages)
+
   ```php
   <?php wp_link_pages( $args ); ?>
   ```
+
 	- [ ] REQUIRED:  Could not find comments_template. See: [comments_template](https://codex.wordpress.org/Template_Tags/comments_template)
+
   ```php
   <?php comments_template( $file, $separate_comments ); ?>
   ```
+
 	- [ ] REQUIRED:  Could not find add_theme_support( 'automatic-feed-links' ). See: [add_theme_support](https://codex.wordpress.org/Function_Reference/add_theme_support)
+
   ```php
   <?php add_theme_support( $feature ); ?>
   ```
+
 	- [ ] REQUIRED:  add_theme_support( post-formats was found in the file functions.php. However get_post_format and/or has_post_format were not found, and no use of formats in the CSS was detected.
 
 [] - RECOMMENDED
+
 	- [ ] RECOMMENDED:  Screenshot size should be 1200x900, to account for HiDPI displays. Any 4:3 image size is acceptable, but 1200x900 is preferred.
+
 	- [ ] RECOMMENDED:  Screenshot dimensions are wrong! Ratio of width to height should be 4:3.
+
 	- [ ] RECOMMENDED:  No reference to the_post_thumbnail() was found in the theme. It is recommended that the theme implement this functionality instead of using custom fields for thumbnails.
+
 	- [ ] RECOMMENDED:  No reference to add_theme_support( "title-tag" ) was found in the theme. It is recommended that the theme implement this functionality for WordPress 4.1 and above.
+
 	- [ ] RECOMMENDED:  No reference to add_theme_support( "custom-header", $args ) was found in the theme. It is recommended that the theme implement this functionality if using an image for the header.
+
 	- [ ] RECOMMENDED:  No reference to add_editor_style() was found in the theme. It is recommended that the theme implement editor styling, so as to make the editor content match the resulting post output in the theme, for a better user experience.
+
 	- [ ] RECOMMENDED:  Could not find the file readme.txt in the theme. Please see [Theme_Documentation](https://codex.wordpress.org/Theme_Review#Theme_Documentation) for more information.
+
 	- [ ] RECOMMENDED:  Tags: is either empty or missing in style.css header.
+
 	- [ ] INFO:  Possible hard-coded links were found in the file page-components.php.
+	
 Line 529: `<li><a href='sass.html'>Sass</a></li>`
 Line 543: `&lt;li>&lt;a href='sass.html'>Sass&lt;/a>&lt;/li>`
 Line 561: `<li><a href='sass.html'>Sass</a></li>`

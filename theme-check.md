@@ -88,8 +88,8 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 
 	- [ ] INFO: Non-printable characters were found in the page-components.php file. You may want to check this file for errors.
 
-Line 614: ```<p class'=caption'>```Cards are a convenient means of displaying content composed of different types of objects. They���re also well-suited for presenting similar objects whose size or support
+		Line 614: ```<p class'=caption'>```Cards are a convenient means of displaying content composed of different types of objects. They���re also well-suited for presenting similar objects whose size or support
 
 	- [ ] INFO: Non-printable characters were found in the footer.php file. You may want to check this file for errors.
 
-Line 23: ```<span class'=white-text'>�� <?php echo date('Y'); ?>``` Copyright ```<?php echo get_bloginfo( name ); ?></```
+		Line 23: ```<span class'=white-text'>�� <?php echo date('Y'); ?>``` Copyright ```<?php echo get_bloginfo( name ); ?></```

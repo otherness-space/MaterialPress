@@ -18,13 +18,13 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 
 	- [ ] The ```<title>``` tags can only contain a call to ```wp_title()```. Use the ```wp_title``` filter to modify the output.
 
-	- [ ] Found a Customizer setting that did not have a sanitization callback function. Every call to the add_setting() method needs to have a sanitization callback function passed.
+	- [ ] Found a Customizer setting that did not have a sanitization callback function. Every call to the ```add_setting()``` method needs to have a sanitization callback function passed.
 
 	- [ ] Could not find the comment-reply script enqueued. See:
 	[Migrating Plugins and Themes to 2.7/Enhanced Comment Display](https://codex.wordpress.org/Migrating_Plugins_and_Themes_to_2.7/Enhanced_Comment_Display)
 
 	```php
-  <?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
+  	<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
   ```
 
 	- [ ] Could not find ```wp_link_pages```. See: [wp_link_pages](https://codex.wordpress.org/Function_Reference/wp_link_pages)

@@ -16,7 +16,7 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 
 	- [ ] The theme doesn't have comment pagination code in it. Use ```paginate_comments_links()``` or ```the_comments_navigation``` or ```next_comments_link()``` and ```previous_comments_link()``` to add comment pagination.
 
-	- [ ] The &#60;title&#62; tags can only contain a call to ```wp_title()```. Use the ```wp_title``` filter to modify the output.
+	- [ ] The ```<title>``` tags can only contain a call to ```wp_title()```. Use the ```wp_title``` filter to modify the output.
 
 	- [ ] Found a Customizer setting that did not have a sanitization callback function. Every call to the add_setting() method needs to have a sanitization callback function passed.
 

@@ -24,7 +24,7 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 	[Migrating Plugins and Themes to 2.7/Enhanced Comment Display](https://codex.wordpress.org/Migrating_Plugins_and_Themes_to_2.7/Enhanced_Comment_Display)
 
 	```php
-  	<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?> <!-- What is the bug that skips this tab? -->
+  	<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?> <!-- What is the bug that skips this tab alignment in md? -->
   ```
 
 	- [ ] Could not find ```wp_link_pages```. See: [wp_link_pages](https://codex.wordpress.org/Function_Reference/wp_link_pages)
@@ -59,30 +59,6 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 
 - [ ] INFO:
 	- [ ] Possible hard-coded links were found in the file page-components.php.
-
-		Line 529: ```<li><a href'=sass.html'>```Sass```</a></li>```
-
-		Line 543: ```<li><a href'=sass.html'>```Sass```</a></li>```
-
-		Line 561: ```<li><a href'=sass.html'>```Sass```</a></li>```
-
-		Line 575: ```<li><a href'=sass.html'>```Sass```</a></li>```
-
-		Line 530: ```<li><a href'=components.html'>```Components```</a></li>```
-
-		Line 544: ```<li><a href'=components.html'>```Components```</a></li>```
-
-		Line 562: ```<li><a href'=components.html'>```Components```</a></li>```
-
-		Line 576: ```<li><a href'=components.html'>```Components```</a></li>```
-
-		Line 531: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
-
-		Line 545: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
-
-		Line 563: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
-
-		Line 577: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
 
 		Line 529: ```<li><a href'=sass.html'>```Sass```</a></li>```
 

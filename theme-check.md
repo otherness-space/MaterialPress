@@ -59,29 +59,53 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 
 - [ ] INFO:
 	- [ ] Possible hard-coded links were found in the file page-components.php.
+
 		Line 529: ```<li><a href'=sass.html'>```Sass```</a></li>```
+
 		Line 543: ```<li><a href'=sass.html'>```Sass```</a></li>```
+
 		Line 561: ```<li><a href'=sass.html'>```Sass```</a></li>```
+
 		Line 575: ```<li><a href'=sass.html'>```Sass```</a></li>```
+
 		Line 530: ```<li><a href'=components.html'>```Components```</a></li>```
+
 		Line 544: ```<li><a href'=components.html'>```Components```</a></li>```
+
 		Line 562: ```<li><a href'=components.html'>```Components```</a></li>```
+
 		Line 576: ```<li><a href'=components.html'>```Components```</a></li>```
+
 		Line 531: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
+
 		Line 545: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
+
 		Line 563: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
+
 		Line 577: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
+
 		Line 529: ```<li><a href'=sass.html'>```Sass```</a></li>```
+
 		Line 543: ```<li><a href'=sass.html'>```Sass```</a></li>```
+
 		Line 561: ```<li><a href'=sass.html'>```Sass```</a></li>```
+
 		Line 575: ```<li><a href'=sass.html'>```Sass```</a></li>```
+
 		Line 530: ```<li><a href'=components.html'>```Components```</a></li>```
+
 		Line 544: ```<li><a href'=components.html'>```Components```</a></li>```
+
 		Line 562: ```<li><a href'=components.html'>```Components```</a></li>```
+
 		Line 576: ```<li><a href'=components.html'>```Components```</a></li>```
+
 		Line 531: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
+
 		Line 545: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
+
 		Line 563: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
+
 		Line 577: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
 
 	- [ ] INFO: Only one text-domain is being used in this theme. Make sure it matches the theme's slug correctly so that the theme will be compatible with WordPress.org language packs. The domain found is materialpress

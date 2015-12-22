@@ -50,19 +50,19 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 - [ ] RECOMMENDED:
 	- [ ] Screenshot size should be 1200x900, to account for HiDPI displays. Any 4:3 image size is acceptable, but 1200x900 is preferred.
 	- [ ] Screenshot dimensions are wrong! Ratio of width to height should be 4:3.
-	- [ ] No reference to the_post_thumbnail() was found in the theme. It is recommended that the theme implement this functionality instead of using custom fields for thumbnails.
-	- [ ] No reference to add_theme_support( "title-tag" ) was found in the theme. It is recommended that the theme implement this functionality for WordPress 4.1 and above.
-	- [ ] No reference to add_theme_support( "custom-header", $args ) was found in the theme. It is recommended that the theme implement this functionality if using an image for the header.
-	- [ ] No reference to add_editor_style() was found in the theme. It is recommended that the theme implement editor styling, so as to make the editor content match the resulting post output in the theme, for a better user experience.
+	- [ ] No reference to ```the_post_thumbnail()``` was found in the theme. It is recommended that the theme implement this functionality instead of using custom fields for thumbnails.
+	- [ ] No reference to ```add_theme_support( "title-tag" )``` was found in the theme. It is recommended that the theme implement this functionality for WordPress 4.1 and above.
+	- [ ] No reference to ```add_theme_support( "custom-header", $args )``` was found in the theme. It is recommended that the theme implement this functionality if using an image for the header.
+	- [ ] No reference to ```add_editor_style()``` was found in the theme. It is recommended that the theme implement editor styling, so as to make the editor content match the resulting post output in the theme, for a better user experience.
 	- [ ] Could not find the file readme.txt in the theme. Please see [Theme_Documentation](https://codex.wordpress.org/Theme_Review#Theme_Documentation) for more information.
-	- [ ] Tags: is either empty or missing in style.css header.
+	- [ ] ```Tags:``` is either empty or missing in style.css header.
 
 - [ ] INFO:
 	- [ ] Possible hard-coded links were found in the file page-components.php.
 
 	- [ ] Possible hard-coded links were found in the file page-components.php.
 
-		- [ ] 	Line 529: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
+		- [ ] Line 529: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
 		- [ ] Line 543: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
 		- [ ] Line 561: &#60;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;
 		- [ ] Line 575: &lt;li&#62;&#60;a href&#39;&#61;sass.html&#39;&#62;Sass&#60;&#47;a&#62;&#60;&#47;li&#62;

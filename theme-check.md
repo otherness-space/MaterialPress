@@ -84,11 +84,12 @@ MaterialPress using Guidelines Version: 20151211 Plugin revision: 1
 		- [ ] Line 563: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
 		- [ ] Line 577: ```<li><a href'=javascript.html'>```JavaScript```</a></li>```
 
-	- [ ] Only one text-domain is being used in this theme. Make sure it matches the theme's slug correctly so that the theme will be compatible with WordPress.org language packs.
-The domain found is materialpress
-	- [ ] Non-printable characters were found in the page-components.php file. You may want to check this file for errors.
+	- [ ] INFO: Only one text-domain is being used in this theme. Make sure it matches the theme's slug correctly so that the theme will be compatible with WordPress.org language packs. The domain found is materialpress
+
+	- [ ] INFO: Non-printable characters were found in the page-components.php file. You may want to check this file for errors.
 
 Line 614: ```<p class'=caption'>```Cards are a convenient means of displaying content composed of different types of objects. They���re also well-suited for presenting similar objects whose size or support
-	- [ ] Non-printable characters were found in the footer.php file. You may want to check this file for errors.
+
+	- [ ] INFO: Non-printable characters were found in the footer.php file. You may want to check this file for errors.
 
 Line 23: ```<span class'=white-text'>�� <?php echo date('Y'); ?>``` Copyright ```<?php echo get_bloginfo( name ); ?></```

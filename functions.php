@@ -541,3 +541,13 @@ add_action( 'wp_head' , array( 'materialpress_customize' , 'header_output' ) );
 add_action( 'customize_preview_init' , array( 'materialpress_customize' , 'live_preview' ) );
 
 ?>
+
+<?php
+
+/**
+ * Will prevent the Toolbar from rendering on the front end of site
+ * https://codex.wordpress.org/Function_Reference/show_admin_bar
+ */
+show_admin_bar( false );
+
+ ?>

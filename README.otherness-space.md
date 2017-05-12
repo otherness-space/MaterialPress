@@ -1,15 +1,15 @@
-#Read Me
+## Read Me
 
 ## Contents
-#### [About](#about-rewind)
+### [About](#about-rewind)
 ##### [Who](#who-rewind)
 ##### [What](#what-rewind)
 ##### [Where](#where-rewind)
 ##### [Why](#why-rewind)
-#### [Notes](#notes-rewind)
+### [Notes](#notes-rewind)
 ##### [Note 1](#note-1-rewind)
 ##### [Note 2](#note-2-rewind)
-#### [Appendix](#appendix-rewind)
+### [Appendix](#appendix-rewind)
 ##### [.gitattributes](#gitattributes-rewind)
 ##### [.gitignore](#gitignore-rewind)
 ##### [.exclude](#exclude-rewind)
